@@ -1,0 +1,4 @@
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/domain-monitor/domain-monitor.json</location>
+</localfile>

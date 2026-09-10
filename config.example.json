@@ -1,0 +1,43 @@
+{
+  "company_name": "YOUR ORGANIZATION NAME",
+  "legitimate_domains": [
+    "yourcompany.com"
+  ],
+  "allowed_domains": [
+    "your-known-redirect-domain.com"
+  ],
+  "similarity_threshold": 80,
+  "log_file": "/var/log/domain-monitor/domain-monitor.json",
+  "alternate_tlds": [
+    "net",
+    "org",
+    "co",
+    "shop",
+    "store",
+    "info",
+    "online",
+    "us"
+  ],
+  "candidate_prefixes": [
+    "www-",
+    "secure-",
+    "official-"
+  ],
+  "candidate_suffixes": [
+    "-login",
+    "-secure",
+    "-support",
+    "-portal",
+    "-account",
+    "-payments",
+    "-billing",
+    "-official",
+    "-online"
+  ],
+  "character_substitutions": {
+    "o": "0",
+    "i": "1",
+    "l": "1",
+    "e": "3"
+  }
+}

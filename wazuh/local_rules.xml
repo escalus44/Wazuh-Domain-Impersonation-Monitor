@@ -1,0 +1,27 @@
+<!--
+Add these rules INSIDE your existing outer <group> in local_rules.xml.
+Do not nest a new <group name="..."> block inside another group.
+
+Choose rule IDs that do not conflict with your existing local rules.
+-->
+
+<rule id="120100" level="6">
+  <decoded_as>json</decoded_as>
+  <field name="event_type">domain_spoof</field>
+  <description>Potential domain impersonation detected: $(suspicious_domain)</description>
+  <group>domain_monitoring,domain_spoof,brand_monitoring,</group>
+</rule>
+
+<rule id="120101" level="8">
+  <if_sid>120100</if_sid>
+  <field name="severity">medium</field>
+  <description>Medium-risk domain impersonation detected: $(suspicious_domain)</description>
+  <group>domain_monitoring,domain_spoof,brand_monitoring,</group>
+</rule>
+
+<rule id="120102" level="10">
+  <if_sid>120100</if_sid>
+  <field name="severity">high</field>
+  <description>HIGH-risk domain impersonation detected: $(suspicious_domain)</description>
+  <group>domain_monitoring,domain_spoof,brand_monitoring,</group>
+</rule>

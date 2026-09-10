@@ -1,0 +1,21 @@
+[Unit]
+Description=Domain Spoof Monitoring Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=domainmon
+Group=domainmon
+WorkingDirectory=/opt/domain-monitor
+ExecStart=/opt/domain-monitor/venv/bin/python /opt/domain-monitor/domain-monitor.py
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/domain-monitor
+ReadWritePaths=/var/log/domain-monitor
+
+[Install]
+WantedBy=multi-user.target
