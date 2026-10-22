@@ -3,6 +3,7 @@
 A lightweight, industry-neutral domain impersonation and typosquatting monitor designed to feed suspicious lookalike-domain findings into Wazuh.
 
 This project can be used by dealerships, healthcare organizations, law firms, manufacturers, schools, financial institutions, MSPs, SaaS companies, nonprofits, or any organization that wants basic external brand/domain monitoring without adding a separate commercial platform.
+web: https://rootnotebook.com/
 
 ## What it does
 
